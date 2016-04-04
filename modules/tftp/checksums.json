@@ -1,0 +1,21 @@
+{
+  "CHANGELOG.md": "62635ef72ff22ac9ef062d79b4419633",
+  "Gemfile": "b37abd03289e9f6e2f37726651a40112",
+  "Gemfile.lock": "4a46a39824358fcdc8140c33479843b9",
+  "LICENSE": "b3f8a01d8699078d82e8c3c992307517",
+  "README.md": "af85366f9723d011bac99da45bfea586",
+  "Rakefile": "965e8e1b280f0f21910d700fc790ff94",
+  "manifests/file.pp": "b7ccecb2650226fb07bb26cc6660f520",
+  "manifests/init.pp": "0b2d0a475592f484cedb3e3a15cae5a7",
+  "manifests/params.pp": "64c3406f5c3938365b9a934901607640",
+  "metadata.json": "ca2d7aef6bbb2c5f127dbe6e102f2e94",
+  "spec/classes/tftp_spec.rb": "d5432452b426a555a743fb97ff5b2290",
+  "spec/defines/tftp_file_spec.rb": "19aab6b06588f5e1d319c910cb1c0591",
+  "spec/puppetlabs_spec/files.rb": "5f7d2da815b3545f1e3347fac84a36c8",
+  "spec/puppetlabs_spec/fixtures.rb": "795629c4bcad28bf3bb91ff6e5ce97b1",
+  "spec/puppetlabs_spec/matchers.rb": "8e77dc7317de7fc2ff289fb716623b6c",
+  "spec/puppetlabs_spec_helper.rb": "b8e2c657fb91ba7129e679d133169986",
+  "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+  "templates/tftpd-hpa.erb": "545ff0c0f7b14a788356a3e9b19eeced",
+  "tests/init.pp": "d6d93d3ff8a806917f27c99b8433fb95"
+}

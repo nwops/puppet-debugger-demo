@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+STDERR.puts "generate changelog: "
+
+def capture(cmd)
+  result = %x{#{cmd}}
+  fail "unable to execute #{cmd.inspect}: #{$?}" unless $?.success?
+  return result
+end
+
+def compare_as_int(a,b)
+  result = a.to_i <=> b.to_i
+  result == 0 ? nil : result
+end
+
+def compare_as_special(a,b)
+  # This probably only supports up to RC9 correctly.
+  if a.nil? and not b.nil?      then  1
+  elsif not a.nil? and b.nil?   then -1
+  elsif a.nil? and b.nil?       then  0
+  else                          a <=> b
+  end
+end
+
+tags = capture('git tag -l').split.sort do |a, b|
+  a = a.split(/[-.]/)
+  b = b.split(/[-.]/)
+
+  compare_as_int(a[0], b[0]) ||
+    compare_as_int(a[1], b[1]) ||
+    compare_as_int(a[2], b[2]) ||
+    compare_as_special(a[3], b[3])
+end.reverse
+
+# ...and insert the "base" version before the first version.
+tags.push nil
+
+tags.each_cons(2) do |top, bottom|
+  STDERR.print '.'
+
+  header = capture("git log -1 --date=short --format=\"%cd %cN <%cE> - #{top}\" \"#{top}\"")
+  puts header
+  puts '=' * header.length
+  puts ''
+
+  changes = capture("git shortlog --no-merges -n -e --format='* %s' -w77,1,3 #{bottom}..#{top}")
+  if changes.empty?
+    puts " * no changes since the previous version."
+  else
+    puts changes.gsub(/^/, ' ')
+  end
+
+  puts ''
+end
+
+STDERR.puts " done."
+exit 0

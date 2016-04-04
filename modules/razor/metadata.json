@@ -1,0 +1,48 @@
+{
+  "name": "puppetlabs-razor",
+  "version": "0.11.0",
+  "source": "git@github.com:puppetlabs/puppetlabs-razor.git",
+  "author": "Puppet Labs",
+  "license": "Apache 2.0",
+  "summary": "Razor puppet module",
+  "description": "Razor provisioning system puppet installation module",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-razor",
+  "dependencies": [
+    {
+      "name": "puppetlabs/java",
+      "version_requirement": ">= 1.0.1"
+    },
+    {
+      "name": "puppetlabs/tftp",
+      "version_requirement": ">= 0.2.1"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "CHANGELOG": "3a6031a6442d9d5500a1009210047809",
+    "CONTRIBUTORS": "4e176e63a6313d0f57d2e5636e071d35",
+    "LICENSE": "b3f8a01d8699078d82e8c3c992307517",
+    "Modulefile": "356127aa9ccb9893edcc0e13636c130d",
+    "README.md": "6c0de5136c505895e3d9602dbc6fecea",
+    "bin/get-version-from-git": "b0e3eb2b4b261d68ee3d9d43a4af99de",
+    "bin/get-version-from-git~": "dc3bab426d6d12ce009f73c5fc06e906",
+    "bin/git-log-to-changelog": "548ab9eccbd2c0ff08acf8b6f2fdf3cd",
+    "bin/git-log-to-changelog~": "910cd78c879ac0e508c576cc6fdc1d07",
+    "examples/install-with-apply.pp": "04c10421df35a3142e4e2bd8350f9e6e",
+    "examples/isc-dhcpd-example.conf": "644d697e4b2cd9ac60622bb75938a815",
+    "files/undionly.kpxe": "8ce968f9a695c9a4683ef917102ffd24",
+    "manifests/init.pp": "14d612b4fe011b1d524143d15a32bbf9",
+    "manifests/libarchive.pp": "a10438ed77e34c1ef45ba65e01da5104",
+    "manifests/server.pp": "e5bd764897d154e408a87c05bca721a3",
+    "manifests/tftp.pp": "99ce7c2f0f5d00ae1ad7a3b0ebf82a5d",
+    "manifests/torquebox.pp": "7756af117825478e58974bbecce210dc",
+    "templates/bootstrap.ipxe.erb": "4443270bc6ebde6eacfcaf3e9aa67317",
+    "templates/bootstrap.ipxe.erb~": "5438657fcd81513e681313fdf01f50fb",
+    "templates/install-zip.sh.erb": "675db2616c7450bd7ac58c540874ee7e",
+    "templates/razor-binary-wrapper.erb": "1f3013b13f377c67a083875d3da9503b",
+    "templates/razor-binary-wrapper.erb~": "a912e5f2fc957f0b7d4bc1f24c72fd51",
+    "templates/razor-server.init.erb": "9e304f707d48e90fd96237a082142c8e"
+  }
+}

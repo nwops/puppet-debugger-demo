@@ -1,0 +1,23 @@
+{
+  "CHANGELOG.md": "f1ddbde22ba55e14364e846d4f3e461b",
+  "README.md": "06a6029a56cd1c4a2e52e627eb378c86",
+  "Rakefile": "c1e839a9278a3327608469950824da9a",
+  "lib/puppet/face/node/encrypt.rb": "cf3830bc967c8ffcbc7344127d9e22b2",
+  "lib/puppet/parser/functions/node_encrypt.rb": "3ed257380ed1dcaaff8fa188a3c441b6",
+  "lib/puppet/parser/functions/redact.rb": "9baa49a5260e4d48388cda5ba30084c7",
+  "lib/puppet/provider/node_encrypted_file/ruby.rb": "f3945c074238397336c1544d92e06fce",
+  "lib/puppet/type/node_encrypted_file.rb": "110d39eda4cc86c9ad33359bb3bca4f6",
+  "lib/puppet_x/binford2k/node_encrypt.rb": "544dace96e08951be2bb195ecd26b720",
+  "manifests/certificates.pp": "3f76e9c15cca774bb557409429a428bf",
+  "manifests/file.pp": "3879ec8d51a216e4b7c2e2615276d65f",
+  "metadata.json": "ddc6c80e5eec1b2037831eed62a8b9b0",
+  "spec/classes/certificates_spec_disabled.rb": "1b24aa35d13c1b1ed81b1513314379ee",
+  "spec/defines/file_spec.rb": "d8e3f400096be24dce6c2e3bf9c4d8cc",
+  "spec/functions/node_encrypt_spec.rb": "00f5ad3abba06ee3e472b33c6a68a9f0",
+  "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+  "spec/unit/puppet/provider/node_encrypted_file/ruby_spec.rb": "b6b979cc4fb8b1c2ee13acb9f268f0f5",
+  "spec/unit/puppet/type/node_encrypted_file_spec.rb": "0f1312d56bf447aa22e75cdceb62ee98",
+  "spec/unit/puppet_x/binford2k/node_encrypt_spec.rb": "48d941b00276392261314e659b4f2b0f",
+  "tests/init.pp": "6c8e6e955545ea0fa0f47c6c84436014",
+  "tests/redact.pp": "dcb26f46c67897c9d86b30fad3a3f556"
+}

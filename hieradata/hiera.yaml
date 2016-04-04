@@ -1,0 +1,14 @@
+---
+#Our hierarcy
+:hierarchy:
+  - "environments/%{::environment}"
+  - "node/%{::fqdn}"
+  - "datacenter/{::datacenter}"
+  - "operatingsystem/%{::operatingsystem}"
+  - "osfamily/%{::osfamily}"
+  - common
+#List the backends we want to use. In this case, we'll just stick with YAML:
+:backends:
+  - yaml
+:yaml:
+  :datadir: './data/'
