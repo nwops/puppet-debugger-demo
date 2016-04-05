@@ -3,7 +3,7 @@
 :hierarchy:
   - "environments/%{::environment}"
   - "node/%{::fqdn}"
-  - "datacenter/{::datacenter}"
+  - "datacenter/%{::datacenter}"
   - "operatingsystem/%{::operatingsystem}"
   - "osfamily/%{::osfamily}"
   - common
@@ -11,4 +11,4 @@
 :backends:
   - yaml
 :yaml:
-  :datadir: './data/'
+  :datadir: '/Users/cosman/github/puppet-repl-demo/hieradata/data'
