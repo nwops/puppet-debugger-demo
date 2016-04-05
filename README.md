@@ -26,7 +26,6 @@ basemodulepath = /Users/cosman/github/puppet-repl-demo/modules
 hiera_config = /Users/cosman/github/puppet-repl-demo/hieradata/hiera.yaml
 ```
 
-### Install
 ### Create a site.pp
 If you want to set topscope variables for use in the repl you need to define them in
 your site.pp file.  So just edit the following file and define whatever you like.
@@ -64,7 +63,7 @@ certs and private keys to encrypt data.
 :set loglevel debug
 ### Scope
 #### Topscope
-You can set your topscope by define variables inside the site.pp file.
+You can set your topscope by defining variables inside the site.pp file.
 
 Edit `./puppet-repl-demo/environments/production/manifests/site.pp` to set new variables
 
