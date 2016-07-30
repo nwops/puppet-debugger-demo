@@ -22,6 +22,7 @@ config_base_dir=`dirname $puppet_config_file`
 mkdir -p $config_base_dir
 touch $puppet_config_file
 # setup puppet configuration
+echo "Configuring Puppet, please wait"
 puppet config set environment production --section main
 puppet config set environmentpath "${repl_demo_dir}/environments" --section main
 puppet config set basemodulepath "${repl_demo_dir}/modules" --section main

@@ -11,8 +11,10 @@ project directory.
 
 ## Isolated docker environment
 If you just want to try this out without messing anything up.  Download docker
-and then run the `docker_it.sh` script.  Once the container starts run the automated
-installer `bash setup.sh`.
+and then run the `docker_it.sh` script.  
+
+Because the container links the project directory in the container you can write puppet
+code, change hiera values or install new modules and the container will use the new files.
 
 ## Manual Install
 ### Install the required gems
