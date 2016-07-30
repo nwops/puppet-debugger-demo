@@ -4,10 +4,11 @@ A demo repo for showing off the puppet-repl
 ## Setup
 In order to run through this demo you need to setup a few things.
 
-Note: this will change your puppet.conf file and update some settings to use this
+1. Download this repo `git clone https://github.com/nwops/puppet-repl-demo#isolated-docker-environment`
+2. Install through one of the methods below (docker, automated or manual)
+
+Note: unless you are using the docker image this will change your puppet.conf file and update some settings to use this
 project directory.
-## Automated Install
-`bash setup.sh` from this project directory
 
 ## Isolated docker environment
 If you just want to try this out without messing anything up.  Download docker
@@ -16,7 +17,10 @@ and then run the `docker_it.sh` script.
 Because the container links the project directory in the container you can write puppet
 code, change hiera values or install new modules and the container will use the new files.
 
-## Manual Install
+## Automated Install on your system
+`bash setup.sh` from this project directory
+
+## Manual Install on your system
 ### Install the required gems
 This can be done in a few ways.  
 1. run `bundle install` from base project directory
