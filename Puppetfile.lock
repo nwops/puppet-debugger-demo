@@ -3,44 +3,13 @@ FORGE
   specs:
     binford2k-node_encrypt (0.2.5)
       puppetlabs-inifile (< 5.0.0, >= 1.4.0)
+    nwops-repl (0.1.0)
     puppetlabs-inifile (1.5.0)
-    puppetlabs-java (1.4.3)
-      puppetlabs-stdlib (< 5.0.0, >= 2.4.0)
-    puppetlabs-ntp (4.1.2)
-      puppetlabs-stdlib (< 5.0.0, >= 4.6.0)
-    puppetlabs-razor (0.11.0)
-      puppetlabs-java (>= 1.0.1)
-      puppetlabs-tftp (>= 0.2.1)
-    puppetlabs-tftp (0.2.3)
-      puppetlabs-xinetd (>= 1.1.0)
-    puppetlabs-xinetd (1.5.0)
-      puppetlabs-stdlib (>= 2.2.1)
-
-GIT
-  remote: git://github.com/puppetlabs/puppetlabs-apt.git
-  ref: master
-  sha: 252bb9fef6f3d8ee1e6710a5d2e68ba81f6e2ae2
-  specs:
-    puppetlabs-apt (2.2.2)
-      puppetlabs-stdlib (< 5.0.0, >= 4.5.0)
-
-GIT
-  remote: git://github.com/puppetlabs/puppetlabs-stdlib.git
-  ref: master
-  sha: c5486aba6284664ae87a65beaa011211c70ea03e
-  specs:
-    puppetlabs-stdlib (4.11.0)
-
-GITHUBTARBALL
-  remote: puppetlabs/puppetlabs-apache
-  specs:
-    puppetlabs-apache (1.8.1)
+    puppetlabs-stdlib (4.12.0)
 
 DEPENDENCIES
   binford2k-node_encrypt (>= 0)
-  puppetlabs-apache (= 1.8.1)
-  puppetlabs-apt (>= 0)
-  puppetlabs-ntp (>= 0)
-  puppetlabs-razor (>= 0)
+  nwops-repl (>= 0)
+  puppetlabs-inifile (>= 0)
   puppetlabs-stdlib (>= 0)
 

@@ -4,6 +4,12 @@ A demo repo for showing off the puppet-repl
 ## Setup
 In order to run through this demo you need to setup a few things.
 
+Note: this will change your puppet.conf file and update some settings to use this
+project directory.
+## Automated Install
+`bash ./setup.sh` from this project directory
+
+## Manual Install
 ### Install the required gems
 This can be done in a few ways.  
 1. run `bundle install` from base project directory
@@ -50,7 +56,7 @@ using your own hiera config.  Change the config in your puppet.conf file to use 
 
 
 ### Puppet Master command for cert setup
-If this is your development machine and you need a puppet signed cert you can run `puppet master --no-daemonize` as a hack to quickly create a ca and cert. There are only a few use cases for doing this.
+If this is your development machine and you need a puppet signed cert you can run `puppet cert generate hostname` as a hack to quickly create  cert. There are only a few use cases for doing this.
 
 Other option would be to run `puppet agent` and get a signed cert from your master.
 
