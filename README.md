@@ -7,7 +7,12 @@ In order to run through this demo you need to setup a few things.
 Note: this will change your puppet.conf file and update some settings to use this
 project directory.
 ## Automated Install
-`bash ./setup.sh` from this project directory
+`bash setup.sh` from this project directory
+
+## Isolated docker environment
+If you just want to try this out without messing anything up.  Download docker
+and then run the `docker_it.sh` script.  Once the container starts run the automated
+installer `bash setup.sh`.
 
 ## Manual Install
 ### Install the required gems
