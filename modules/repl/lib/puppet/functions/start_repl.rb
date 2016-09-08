@@ -13,7 +13,11 @@ Puppet::Functions.create_function(:start_repl, Puppet::Functions::InternalFuncti
   end
 
   def start_repl(scope, options = {})
-    options = options.merge({:scope => scope})
-    ::PuppetRepl::Cli.start(options)
+    if $stdout.isatty
+      options = options.merge({:scope => scope})
+      ::PuppetRepl::Cli.start(options)
+    else
+     Puppet.warning 'start_repl(): refusing to start the debugger on a daemonized master'
+    end
   end
 end

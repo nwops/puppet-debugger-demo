@@ -1,5 +1,5 @@
-bundle exec retrospec puppet new_module -n repl_test
-cd repl_test
-bundle install --without integration
+#!/usr/bin/bash
 
-bundle exec prepl repl_scripts/
+script_file="./demo_scripts/repl_scripts/repl_as_a_debugger.pp"
+docker run --rm -v ${HOME}/.ssh:/home/puppet/.ssh -v ${PWD}:/myapp --workdir /myapp --hostname=repldemo -ti logicminds/puppet-repl-demo-talk prepl -p $script_file
+

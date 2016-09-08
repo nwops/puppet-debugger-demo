@@ -2,3 +2,6 @@
 blahmessage: 'some other OS i do not know about'
 key1: 'hello'
 key3: 'yo!'
+foobar::var1: "/tmp/%{hiera('key1')}"
+foobar::var2: "%{facts.hostname}"
+secret: supersecret

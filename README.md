@@ -1,27 +1,58 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [puppet-repl-demo](#puppet-repl-demo)
+  - [Adding new mdoules for this demo](#adding-new-mdoules-for-this-demo)
+  - [Setup for the demo](#setup-for-the-demo)
+    - [Isolated docker environment](#isolated-docker-environment)
+    - [Automated Install on your system](#automated-install-on-your-system)
+    - [Manual Install on your system](#manual-install-on-your-system)
+      - [Install the required gems](#install-the-required-gems)
+      - [Setup your puppet config](#setup-your-puppet-config)
+  - [Additiional Puppet Setup (Optional)](#additiional-puppet-setup-optional)
+    - [Create a site.pp](#create-a-sitepp)
+    - [Setup hiera](#setup-hiera)
+    - [Puppet Master command for cert setup](#puppet-master-command-for-cert-setup)
+  - [Demo Sections](#demo-sections)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # puppet-repl-demo
 A demo repo for showing off the puppet-repl
 
-## Setup
+## Adding new mdoules for this demo
+This demo project maintains a librarian-puppet Puppetfile.  If you want new modules just add them to the Puppetfile.
+
+1. Install librarian-puppet `gem install 'librarian-puppet'`
+2. install modules from the Puppetfile by running `librarian-puppet` 
+
+## Setup for the demo
 In order to run through this demo you need to setup a few things.
 
-1. Download this repo `git clone https://github.com/nwops/puppet-repl-demo#isolated-docker-environment`
+1. Download this repo `git clone https://github.com/nwops/puppet-repl-demo`
 2. Install through one of the methods below (docker, automated or manual)
 
-Note: unless you are using the docker image this will change your puppet.conf file and update some settings to use this
-project directory.
+Note: unless you are using the docker method you will change your puppet.conf file and update some settings to use this
+project directory as well as install some required gems.
 
-## Isolated docker environment
+### Isolated docker environment
 If you just want to try this out without messing anything up.  Download docker
 and then run the `docker_it.sh` script.  
 
 Because the container links the project directory in the container you can write puppet
 code, change hiera values or install new modules and the container will use the new files.
 
-## Automated Install on your system
+This is going to be the easiest thing to do without breaking your local environment.
+
+### Automated Install on your system
 `bash setup.sh` from this project directory
 
-## Manual Install on your system
-### Install the required gems
+While this is pretty simple, the setup script will install a few gems, add a local puppet cert and change a few
+puppet settings to work this this demo project.  See the manual steps below for a quick summary of what the script does.
+
+### Manual Install on your system
+#### Install the required gems
 This can be done in a few ways.  
 1. run `bundle install` from base project directory
 2. Install the gems manually
@@ -30,7 +61,7 @@ This can be done in a few ways.
   gem install 'librarian-puppet'
   ```
 
-### Setup your puppet config
+#### Setup your puppet config
 Edit your puppet config file which can be located by running: `puppet config print config`
 
 The settings below should point to the puppet-repl-demo directory.
@@ -43,16 +74,22 @@ basemodulepath = /Users/cosman/github/puppet-repl-demo/modules
 hiera_config = /Users/cosman/github/puppet-repl-demo/hieradata/hiera.yaml
 ```
 
+## Additiional Puppet Setup (Optional)
+Using the puppet-repl only requires installation of the gem.  However, to maximize the repl's 
+capabilities you should setup your development environment further to work with puppet.
+
 ### Create a site.pp
 If you want to set topscope variables for use in the repl you need to define them in
-your site.pp file.  So just edit the following file and define whatever you like.
+your site.pp file.  So just edit the following file and define whatever you like.  While this is for demo
+purposes, ideally you already have a site.pp in your puppet source code.
 
 `./puppet-repl-demo/environments/production/manifests/site.pp`
+
 
 ### Setup hiera
 The data directory for hiera for this demo is hard coded so please update to match your system's
 directory path. There is no manipulation of data going on so this could also point to
-your real hiera data as well.  Please edit `/Users/cosman/github/puppet-repl-demo/hieradata/hiera.yaml` to
+your real hiera data as well.  Please edit `./puppet-repl-demo/hieradata/hiera.yaml` to
 match your path.
 
 ```yaml
@@ -76,33 +113,6 @@ certs and private keys to encrypt data.
 
 
 ## Demo Sections
-### Debug Level
-:set loglevel debug
-### Scope
-#### Topscope
-You can set your topscope by defining variables inside the site.pp file.
+The demo scripts are used to auto run a demo in a container.  To use these scripts just run:
 
-Edit `./puppet-repl-demo/environments/production/manifests/site.pp` to set new variables
-
-### Facts
-facts
-
-### Regexes
-
-$::hostname =~ /foo/
-
-### Resource
-file{'/tmp/test2.txt': ensure => present, mode => '0755'}
-
-file{'/tmp/test': ensure => present, mode => 755}
-
-### Maps
-['/tmp/test3', '/tmp/test4'].map |String $path| { file{$path: ensure => present} }
-
-### Each
-['/tmp/test3', '/tmp/test4'].each |String $path| { file{$path: ensure => present} }
-
-### Known Resource Types
-include apache
-
-krt
+`bash ./demo_scripts/<name_of_script>.sh`

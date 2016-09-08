@@ -1,8 +1,8 @@
 resources
 classes
-class repl::class_test(
+define repl::class_test(
   String $var1,
-  String $file_name,
+  String $file_name = $name,
   Boolean $enable_feature = true,
 ) {
   if $enable_feature {
@@ -17,10 +17,10 @@ class repl::class_test(
     content => $content,
   }
 }
-class{'repl::class_test':
+repl::class_test{'/tmp/test2.txt':
   var1           => 'foobar',
   enable_feature => true,
   file_name      => '/tmp/test2.txt'
 }
 resources
-classes
+krt

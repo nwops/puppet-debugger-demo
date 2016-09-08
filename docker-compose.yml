@@ -1,0 +1,93 @@
+version: '2'
+
+services:
+  puppet:
+    container_name: puppet
+    hostname: puppet
+    image: puppet/puppetserver
+    volumes:
+      - ./modules/:/etc/puppetlabs/code/modules/
+    # In some cases unqualified hostnames can have the .local suffix
+    # added, I've seen this under Docker of Mac Beta for instance.
+    # Due to needing to access PuppetDB on same hostame as signed in the
+    # certificate you may need to uncommant the following lines
+    environment:
+     - PUPPETDB_SERVER_URLS=https://puppetdb.local:8081
+    links:
+     - puppetdb:puppetdb.local
+    depends_on:
+      - puppetdbpostgres
+    ports:
+      - 8140:8140
+
+  puppetdbpostgres:
+    container_name: postgres
+    image: puppet/puppetdb-postgres
+    environment:
+      - POSTGRES_PASSWORD=puppetdb
+      - POSTGRES_USER=puppetdb
+    ports:
+      - 5432
+
+  puppetdb:
+    hostname: puppetdb
+    image: puppet/puppetdb
+    ports:
+      - 8080:8080
+      - 8081:8081
+    depends_on:
+      - puppetdbpostgres
+
+  repl_agent:
+    hostname: repldemo
+    image: logicminds/puppet-repl-demo
+    depends_on:
+      - puppet
+    volumes:
+      - ./modules/:/etc/puppetlabs/code/modules/
+
+  puppet_agent1:
+    hostname: puppet_agent1.local
+    image: puppet/puppet-agent-alpine
+    command:
+      - 'agent'
+      - '--waitforcert=100'
+    depends_on:
+      - puppet
+
+  puppet_agent2:
+    hostname: puppet_agent2.local
+    image: puppet/puppet-agent-ubuntu
+    depends_on:
+      - puppet
+    command:
+      - 'agent'
+      - '--waitforcert=100'
+
+  puppet_agent3:
+    hostname: puppet_agent3.local
+    image: puppet/puppet-agent-centos
+    depends_on:
+      - puppet
+    command:
+      - 'agent'
+      - '--waitforcert=100'
+
+  puppet_agent4:
+    hostname: puppet_agent4.local
+    image: puppet/puppet-agent-debian
+    depends_on:
+      - puppet
+    command:
+      - 'agent'
+      - '--waitforcert=100'
+
+  puppetboard:
+    image: puppet/puppetboard
+    ports:
+      - 8000:8000
+  puppetexplorer:
+    image: puppet/puppetexplorer
+    ports:
+      - 80:80
+    read_only: true

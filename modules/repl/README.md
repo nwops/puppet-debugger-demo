@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nwops/puppet-repl-module.svg?branch=master)](https://travis-ci.org/nwops/puppet-repl-module)
+
 # Puppet Repl
 This module contains a function `start_repl` and is for use with the
 [puppet-repl gem](https://github.com/nwops/puppet-repl).

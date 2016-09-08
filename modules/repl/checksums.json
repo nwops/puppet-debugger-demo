@@ -1,15 +1,16 @@
 {
-  "Gemfile": "4cfb6097a2471a44f8604d18b3bc0108",
-  "Gemfile.lock": "c49dcc546589201e289f799da1966452",
-  "README.md": "9f3b8cbd6ee3553d91d7ac1f50624c2f",
+  "Gemfile": "560e709c0b890682b3f9493fd92fa536",
+  "Gemfile.lock": "0972c5c2b63a30a7ed0844a49d3ead94",
+  "README.md": "fdd8451a18b1c8815954ab3b2fc796da",
   "Rakefile": "de93f4a2835ac2f6ff6ffadba00cf6bf",
   "Vagrantfile": "049c4cdb85e87cf89934d088b92fd3c9",
-  "lib/puppet/functions/start_repl.rb": "ccbae46649886cd9e8f737f0b75a5c17",
+  "lib/puppet/functions/start_repl.rb": "d6ac25ebca68e9e049966266bb805e68",
   "manifests/init.pp": "0902aafd348181033f1c89096cef4e93",
   "manifests/repl_test.pp": "c6df67654baf0ec583540585de98d3c5",
-  "metadata.json": "5cae559512d3e88f222918eac726ebae",
+  "metadata.json": "70afeea3c4b1eaa9f863fc57d017ec24",
   "repl_schema.yaml": "2aae26b302fb2e54cd5f57e1e2f8c0c4",
   "spec/classes/repl_spec.rb": "168d7b7735293bcff6145436ba0de0c4",
   "spec/classes/repl_test_spec.rb": "0f1d5722200c3363c4dcb422a11832a2",
-  "spec/spec_helper.rb": "fd72ecb3974da7ae810b90da0af8fc81"
+  "spec/spec_helper.rb": "fd72ecb3974da7ae810b90da0af8fc81",
+  "test.pp": "96ccaabe5c7f90d5050c627ccf046864"
 }

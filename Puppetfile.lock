@@ -3,7 +3,7 @@ FORGE
   specs:
     binford2k-node_encrypt (0.2.5)
       puppetlabs-inifile (< 5.0.0, >= 1.4.0)
-    nwops-repl (0.1.0)
+    nwops-repl (0.1.1)
     puppetlabs-inifile (1.5.0)
     puppetlabs-stdlib (4.12.0)
 
