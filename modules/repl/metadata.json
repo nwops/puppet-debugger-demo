@@ -1,6 +1,6 @@
 {
   "name": "nwops-repl",
-  "version": "0.1.1",
+  "version": "0.2.3",
   "author": "Corey Osman",
   "summary": "Used for starting the puppet repl from inside puppet code",
   "license": "Apache-2.0",

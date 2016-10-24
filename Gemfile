@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
-gem 'puppet-repl'
+gem 'puppet-repl', '>= 0.3.3'
 gem 'librarian-puppet'
 gem 'puppet-retrospec'
+gem 'hiera-yamll'
+gem 'pry'

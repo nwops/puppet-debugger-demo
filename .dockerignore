@@ -1,0 +1,7 @@
+vendor
+.bundle
+.librarian
+.tmp
+demo_scripts
+environments
+modules

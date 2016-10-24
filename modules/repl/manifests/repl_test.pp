@@ -10,6 +10,10 @@ class repl::repl_test(
   # how to find values with an empheral scope
   $var2.each | String $item | {
     file{"/tmp/${item}": ensure => present}
-    start_repl()
+    start_repl({'run_once' => true})
+  }
+  start_repl({'run_once' => true})
+  if $var1 == 'value1' {
+    start_repl({'run_once' => true})
   }
 }

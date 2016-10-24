@@ -1,12 +1,12 @@
 #!/usr/bin/bash
 # Setups up the demo and local environment in order to use with the puppet repl
 # Install dependencies
-if [ `gem list -i puppet-repl -v '>=0.3.0'` == 'false' ]; then
-   gem install puppet-repl --no-rdoc --no-ri # forces puppet install unless already present
-fi
-if [ `gem list -i librarian-puppet` == 'false' ]; then
-   gem install librarian-puppet --no-rdoc --no-ri
-fi
+#if [ `gem list -i puppet-repl -v '>=0.3.0'` == 'false' ]; then
+   #gem install puppet-repl --no-rdoc --no-ri # forces puppet install unless already present
+#fi
+#if [ `gem list -i librarian-puppet` == 'false' ]; then
+   #gem install librarian-puppet --no-rdoc --no-ri
+#fi
 
 # Install puppet modules
 # librarian-puppet install

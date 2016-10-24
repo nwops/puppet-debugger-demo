@@ -27,7 +27,7 @@ describe 'repl::repl_test' do
     }
   end
   # disabled until we can figure out how to exit the repl
-  xit { is_expected.to contain_file('/tmp/test.txt')}
+  it { is_expected.to contain_file('/tmp/test.txt')}
 
   # add these two lines in a single test block to enable puppet and hiera debug mode
   # Puppet::Util::Log.level = :debug

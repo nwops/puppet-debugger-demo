@@ -8,5 +8,8 @@
 - common
 :backends:
 - yaml
+- yamll
 :yaml:
   :datadir: "/myapp/hieradata/data"
+:yamll:
+  :datadir: "/myapp/hieradata/otherdata"
