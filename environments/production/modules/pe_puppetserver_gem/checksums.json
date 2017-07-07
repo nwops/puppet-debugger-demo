@@ -1,0 +1,11 @@
+{
+  "Gemfile": "2a2c5477fbcec4d6af4f08a57c8b929d",
+  "Gemfile.lock": "1b3fd336a1b653f7e76b25a845cbd1be",
+  "LICENSE": "35447b6f17aafd10a41cdd21230be2a8",
+  "README.md": "8de3721b59670f2ae2a72443a7812374",
+  "lib/puppet/provider/package/pe_puppetserver_gem.rb": "ff46a4c4e79d6d5baffc90e3516bd7cd",
+  "metadata.json": "645cb4a6ad075f422ab46de9fe421344",
+  "spec/acceptance/pe_puppetserver_gem_spec.rb": "795a60af3135b5c7db33294684bb9f32",
+  "spec/spec_helper_acceptance.rb": "6c50bf4664473b49e25fbc82f0112450",
+  "tests/init.pp": "8c905b8ff325a2b53500efe6e160803d"
+}

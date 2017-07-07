@@ -1,5 +1,5 @@
 # assign all top scope variables here
-$clientcert = 'foo'
+#$clientcert = 'foo'
 $datacenter = 'datacenter1'
 
 node /foo/ {

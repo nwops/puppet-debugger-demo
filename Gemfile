@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
-gem 'puppet-repl', '>= 0.3.3'
+gem 'puppet-debugger', ENV['PUPPET_DEBUGGER_VERSION']
+gem 'puppet'
 gem 'librarian-puppet'
 gem 'puppet-retrospec'
 gem 'hiera-yamll'
 gem 'pry'
+gem 'graphviz'
+gem 'puppet-debugger-playbooks'
+gem 'debugger-graph', github: 'nwops/puppet-debugger-graph'

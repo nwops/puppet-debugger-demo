@@ -6,4 +6,4 @@ if [[ $? -ne 0 ]]; then
   echo "You need docker installed, first"
   exit 1
 fi
-docker run --rm -v ${PWD}:/myapp --workdir /myapp --hostname=repldemo -ti logicminds/puppet-repl-demo /bin/bash /myapp/start_container.sh
+docker run --rm -v ${PWD}:/myapp -p 12000:12000 --workdir /myapp --hostname=debuggerdemo -ti logicminds/puppet-debugger-demo /bin/bash /myapp/start_container.sh
