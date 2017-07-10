@@ -1,3 +1,0 @@
----
-  epel::settings:
-    repo_package_url: 'http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm'

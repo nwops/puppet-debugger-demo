@@ -16,5 +16,5 @@ gem install puppet-repl
 
 
 # start the repl
-echo "prepl"
-prepl
+echo "puppet debugger"
+puppet debugger

@@ -1,4 +1,0 @@
----
-  bacula-client::settings:
-    work_dir_path: '/var/lib/bacula'
-    init_file_path: '/etc/default/bacula-fd'

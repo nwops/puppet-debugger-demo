@@ -1,4 +1,0 @@
----
-  dkms::settings:
-    tp_prerequisites:
-      - epel

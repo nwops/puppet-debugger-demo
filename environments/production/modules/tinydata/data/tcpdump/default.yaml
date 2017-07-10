@@ -1,3 +1,0 @@
----
-  tcpdump::settings:
-    package_name: 'tcpdump'

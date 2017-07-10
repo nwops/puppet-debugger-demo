@@ -1,4 +1,0 @@
----
-  nfs-server::settings:
-    config_file_path: '/etc/exports'
-    tcp_port: '2049'

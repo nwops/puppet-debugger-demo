@@ -1,3 +1,0 @@
----
-  nfs-client::settings:
-    service_name: 'rpcbind'

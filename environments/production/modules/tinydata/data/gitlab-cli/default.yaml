@@ -1,7 +1,0 @@
----
-  gitlab-cli::settings:
-    package_name: 'gitlab'
-    package_provider: 'gem'
-    tp_prerequisites:
-      - ruby
-      - ruby-dev

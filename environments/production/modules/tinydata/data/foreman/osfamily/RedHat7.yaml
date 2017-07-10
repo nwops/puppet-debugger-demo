@@ -1,3 +1,0 @@
----
-  foreman::settings:
-    repo_package_url: 'https://yum.theforeman.org/releases/1.14/el7/x86_64/foreman-release.rpm'

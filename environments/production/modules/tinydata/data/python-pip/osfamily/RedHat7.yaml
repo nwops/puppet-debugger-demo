@@ -1,3 +1,0 @@
----
-  python-pip::settings:
-    site_packages_dir_path: '/usr/lib/python2.7/site-packages'

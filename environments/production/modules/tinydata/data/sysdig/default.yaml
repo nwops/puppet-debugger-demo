@@ -1,5 +1,0 @@
----
-  sysdig::settings:
-    package_name: 'sysdig'
-    tp_prerequisites:
-      - dkms

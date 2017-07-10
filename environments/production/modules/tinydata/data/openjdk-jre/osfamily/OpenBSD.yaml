@@ -1,3 +1,0 @@
----
-  openjdk-jre::settings:
-    package_name: 'jre'

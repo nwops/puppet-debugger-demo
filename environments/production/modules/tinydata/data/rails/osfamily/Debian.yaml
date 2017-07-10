@@ -1,5 +1,0 @@
----
-  rails::settings:
-    package_prerequisites:
-      - 'ruby-dev'
-      - 'zlib1g-dev'

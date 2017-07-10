@@ -3,9 +3,10 @@ FORGE
   specs:
     binford2k-node_encrypt (0.2.5)
       puppetlabs-inifile (< 5.0.0, >= 1.4.0)
-    nwops-repl (0.2.4)
     puppetlabs-inifile (1.6.0)
-    puppetlabs-stdlib (4.13.1)
+    puppetlabs-ntp (6.2.0)
+      puppetlabs-stdlib (< 5.0.0, >= 4.13.1)
+    puppetlabs-stdlib (4.17.1)
 
 GIT
   remote: git://github.com/nwops/puppet-debug
@@ -17,7 +18,7 @@ GIT
 DEPENDENCIES
   binford2k-node_encrypt (>= 0)
   nwops-debug (>= 0)
-  nwops-repl (>= 0)
   puppetlabs-inifile (>= 0)
+  puppetlabs-ntp (>= 0)
   puppetlabs-stdlib (>= 0)
 

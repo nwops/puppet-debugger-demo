@@ -1,4 +1,0 @@
----
-  nfs-client::settings:
-    package_name: 'nfs-utils'
-    init_file_path: '/etc/sysconfig/nfs-common'

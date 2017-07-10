@@ -52,7 +52,6 @@ Puppet::Functions.create_function(:'debug::break', Puppet::Functions::InternalFu
   # for compatibility with older puppet versions
   # The basics behind this are to find the `.pp` file in the list of loaded code
   def stacktrace
-    require 'pry'; binding.pry
     result = caller().reduce([]) do |memo, loc|
       if loc =~ /\A(.*\.pp)?:([0-9]+):in\s(.*)/
         # if the file is not found we set to code

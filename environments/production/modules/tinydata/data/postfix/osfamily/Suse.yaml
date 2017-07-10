@@ -1,4 +1,0 @@
----
-  postfix::settings:
-    setgid_group: 'maildrop'
-    daemon_dir_path: '/usr/lib/postfix'
